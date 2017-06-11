@@ -1,10 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-  <title>Hello from the Pi</title>
-    <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
-</head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
 
-<style type="text/css">
+  <title>Hello from the Pi</title>
+  <script src=
+  "//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"
+  type="text/javascript">
+</script>
+  <style type="text/css">
 
   body {background-color: lightyellow}
   h1 {color:blue}
@@ -41,41 +47,31 @@
     overflow: hidden;
   }
 
-</style>
+  </style>
+</head>
 
 <body>
- 
-  <h1>Web RPi Robot Control</h1>
-  
-  
+  <iframe src="http://10.0.0.10:9000/javascript_simple.html"
+  frameborder="0" width="640" height="480" align="left"
+  scrolling="no"></iframe>
+  Robot controls:<br>	
+  <span class="floating-box" style=
+  " font-size: 140%;font-weight:bold;margin-top: 10px"><input type=
+  "button" value="^" onclick="go('w')" class="btnTop"><br>
+  <input type="button" value="&lt;" onclick="go('a')" class="btn">
+  <input type="button" value="." onclick="go('.')" class="btn">
+  <input type="button" value="&gt;" onclick="go('d')" class=
+  "btn"><br>
+  <input type="button" value="v" onclick="go('s')" class=
+  "btnTop"></span>
+
   <br>
+  <br><span class="floating-box">Left proximity:&nbsp;<t id="leftP">-</t>
 
-  <iframe src="http://169.0.143.200:9000/javascript_simple.html" frameborder="0"
-    align="middle" width="640" height="480" align="middle"
-    scrolling="no">
-  </iframe>
-  
-  <br>
-  
-  <span class="floating-box" style=" 
-    font-size: 140%;font-weight:bold;margin-top: 10px">
 
-    <input type="button" value="^" onclick="go('w')" class="btnTop"><br />
-    <input type="button" value="<" onclick="go('a')" class="btn">
-    <input type="button" value="." onclick="go('.')" class="btn">
-    <input type="button" value=">" onclick="go('d')" class="btn"><br />
-    <input type="button" value="v" onclick="go('s')" class="btnTop">
-    
-  </span>
-
-  <span class="floating-box">
-    <text>Left proximity: <text id="leftP">-</text></text>
-    <br />
-    <text>Right proximity: <text id="rightP">-</text></text>
-  </status>
-
-  <script type="text/javascript">
-    window.setInterval(function(){
+  <br>Right proximity:&nbsp;<t id="rightP">-</t><span>
+<script type="text/javascript">
+window.setInterval(function(){
       status()}, 1000);
 
     function go(qry)
@@ -111,6 +107,3 @@
   </script>
 </body>
 </html>
-
-
-
